@@ -8,9 +8,14 @@ def dec(func):
     return owrapper
     
 
-@dec
+# @dec
 def myprint(str="default"):
     """Just prints Hi"""
     print("Hi")
     
-myprint()
+# myprint()
+
+# normal version on another branch
+
+wrapp = dec(myprint)
+wrapp()
