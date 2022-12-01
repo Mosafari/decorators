@@ -8,17 +8,30 @@ def dec(func):
     return owrapper
     
 
-@dec
+# @dec
 def myprint(str="default"):
     """Just prints Hi"""
     print("Hi")
     
+<<<<<<< HEAD
 myprint()
 
 
 print("\n","\n") # empty lines
 
 # runtime of func using decorators
+=======
+# myprint()
+
+# normal version on another branch
+
+wrapp = dec(myprint)
+wrapp()
+
+print("\n","\n") # empty lines
+
+# runtime of func normal version
+>>>>>>> normalwrapper
 
 # importing time module
 import time
@@ -32,11 +45,19 @@ def timer(func):
         return val
     return wraaper
 
+<<<<<<< HEAD
 
-@timer
+# @timer
+=======
+>>>>>>> normalwrapper
 def wastetime():
     a =[]
     for i in range(40000000):
         a.append(i)
         
-wastetime()
+<<<<<<< HEAD
+# wastetime()
+=======
+totaltime =timer(wastetime)
+totaltime()
+>>>>>>> normalwrapper
